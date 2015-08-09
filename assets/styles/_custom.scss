@@ -1,0 +1,428 @@
+/**
+ ** Imports
+ **/
+
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+
+/**
+ ** Variables and maps
+ **/
+
+ $bluelight: #2893ff;
+ $bluedark: #728391;
+ $bluebrand: #0060c1; 
+ $bluebevel: #0e3459;
+ $bluegoal: #0063be;
+
+ $goalcolors: (
+ 	#0063be,
+ 	#66bc2d,
+ 	#dd6000,
+ 	#dc291e,
+ 	#485dc5,
+ 	#00aeef
+ 	);
+
+
+/** ------------------------
+ **  HEADER
+ **/
+ body {
+ 	font-family: 'Open Sans', sans-serif;
+ }
+
+.header {
+	background: #fff;
+	.header-row {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+	.logo-wrapper {
+		width: 183px;
+		margin-top: 24px;
+		margin-bottom: 24px;
+		padding: 0;
+		a {
+			background-image: url("../../assets/images/logo.gif");
+			background-size: cover;
+			display: inline-block;
+			height: 36px;
+			width: 183px;
+		}
+	}
+	.content-wrapper {
+		float: right;
+		margin-top: 24px;
+		margin-bottom: 24px;
+		ul {
+			text-align: right;
+			float: right;
+			transform: translateY(50%);
+		}
+		li {
+			display: inline-block;
+			padding: 0 3px 0 6px;
+			border-left: 1px solid $bluedark;
+			a {
+				font-size: 0.9em;
+				&:hover {
+				text-decoration: none;
+				color: $bluelight;
+				}
+				.df-flag {
+					position: absolute;
+					top: 3;
+					height: 16px;
+					width: 27px;
+				}
+				span {
+					padding-left: 10px;
+				}
+			}
+			&:first-child {
+				border: none;
+			}
+			&:last-child {
+				&:hover {
+					ul {
+						display: inline-block;
+					}
+				}
+				ul {
+					display: none;
+					position: absolute;
+					top: -170;
+					right: 0;
+					padding-left: 0;
+					width: 300px;
+					&:after {
+						width: 25%;
+						height: 25px;
+						top: -25px;
+						left: 75%;
+						position: absolute;
+						content: "";
+					}
+				li {
+					padding: 10px;
+					border: none;
+					text-align: center;
+					background-color: #f1f2f2;
+					border-top: 1px solid grey;
+					border-left: 1px solid grey;
+					border-right: 1px solid grey;
+					&:nth-child(even) {
+						border-left: none;
+					}
+					&:nth-last-child(-n+2) {
+						border-bottom: 1px solid grey;
+					}
+					&:nth-last-child(3) {
+						border-bottom: 1px solid grey;
+					}
+					&:last-child {
+						height: 200%;
+						border-top: none;
+					}
+				}
+				}
+			}
+		}
+	}
+	.input-group {
+		border: 1px solid $bluedark;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		width: 320px;
+		&:hover {
+			border: 1px solid $bluelight;
+		}
+		input {
+			border-radius: 0;
+			width: 300px;
+			&:before {
+				font-family: Font-Awesome;
+			}
+		}
+		button {
+			height: 140%;
+			border-radius: 0;
+			color: white;
+			text-transform: uppercase;
+			font-weight: 700;
+			background-color: #0060c1;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			&:hover {
+				background-color: $bluelight;
+			}
+		}
+	}
+}
+
+/** ------------------------
+ **  STICKY NAV
+ **/
+.sticky-nav {
+	background: $bluebrand;
+}
+.sticky-nav-row {
+	width: 1000px;
+	height: 49px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav-menu {
+	ul {
+		padding-left: 0;
+	}
+	li {
+		padding: 14px 10px;
+		display: inline-block;
+		border-left: 1px solid $bluebevel;
+		height: 49px;
+		font-size: 15px;
+		&:hover {
+			&:nth-child(1) {
+				.range-wrapper {
+					display: inline-block;
+				}
+			}
+			&:nth-child(2) {
+				.goal-wrapper {
+					display: inline-block;
+				}
+			}
+			&:nth-child(3) {
+				.sport-wrapper {
+					display: inline-block;
+				}
+			}
+			&:nth-child(4) {
+				.zone-wrapper {
+					display: inline-block;
+				}
+			}
+		}
+		&:last-child {
+			border-right: 1px solid $bluebevel;
+		}
+	}
+	a {
+		color: white;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.range-wrapper {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 133;
+	width: 98.75vw;
+	height: 335px;
+	background: #ededed;
+}
+.range-row {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 15px;
+	padding-left: 10px;
+	width: 1000px;
+	a {
+		color: #333;
+		font-size: 14px;
+		font-weight: 700;
+		font-size: 12px;
+		&:hover {
+			text-decoration: none;
+			color: $bluelight;
+		}
+	}
+	h2,
+	h4 {
+		margin: 12px 0;
+		white-space: nowrap;
+	}
+	li {
+		height: auto;
+		width: auto;
+		display: block;
+		border: none;
+		padding: 0;
+		text-transform: none;
+		&:last-child {
+			border: none;
+		}
+		a {
+			text-transform: none;
+			font-weight: 400;
+
+		}
+	}
+}
+.goal-wrapper {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 133;
+	width: 98.75vw;
+	height: 150px;
+	background: #ededed;
+}
+.goal-row {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	.num,
+	.text {
+		display: inline-block;
+		padding: 12px 16px;
+		margin: 0;
+	}
+	li {
+		border: none;
+		margin-top: 17.5px;
+		margin-right: 5%;
+		width: 30%;
+		padding: 0;
+		float: left;
+		&:last-child {
+			border: none;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		@for $i from 1 through length($goalcolors) {
+			&:nth-child(#{$i}){
+				.num {
+				background-color: nth($goalcolors, $i);
+				}
+				.text {
+					&:hover {
+						background-color: nth($goalcolors, $i);
+					}
+				}
+			}
+		}
+	}
+	a {
+		display: block;
+	}
+}
+.num {
+	height: 48px;
+	width: 52px;
+	font-size: 18px;
+	font-weight: 700;
+	background-color: $bluegoal;
+	position: relative;
+	text-align: center;
+}
+.text {
+	vertical-align: top;
+	background-color: #fff;
+	width: 248px;
+	height: 48px;
+	color: #728391;
+	font-size: 16px;
+	font-weight: 700;
+	&:hover {
+		background-color: $bluegoal;
+		color: #fff;
+	}
+}
+.sport-wrapper {
+	@extend .goal-wrapper;
+}
+.sport-row {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	.num,
+	.text {
+		display: inline-block;
+		padding: 12px 16px;
+		margin: 0;
+		background-color: #fff;
+		color: #728391;
+		&:hover {
+			color: $bluebrand;
+		}
+	}
+	.text {
+		width: 247px;
+		border-left: 1px solid #ededed;
+	}
+	.num {
+		width: 39px;
+	}
+	li {
+		border: none;
+		margin-top: 17.5px;
+		margin-right: 5%;
+		width: 30%;
+		padding: 0;
+		float: left;
+		&:last-child {
+			border: none;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+	i {
+		position: absolute;
+		left: 0;
+		right: 0;
+		font-size: 24px;
+	}
+}
+.zone-wrapper {
+	@extend .goal-wrapper;
+}
+.zone-row {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	.num,
+	.text {
+		display: inline-block;
+		padding: 12px 16px;
+		background-color: #fff;
+		color: #728391;
+		&:hover {
+			color: $bluebrand;
+		}
+	}
+	.text {
+		width: 177px;
+		border-left: 1px solid #ededed;
+	}
+	li {
+		border: none;
+		margin-top: 17.5px;
+		margin-right: 2.5%;
+		width: 23%;
+		padding: 0;
+		float: left;
+		&:last-child {
+			border: none;
+		}
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+	i {
+		position: absolute;
+		left: 0;
+		right: 0;
+		font-size: 24px;
+	}
+}
