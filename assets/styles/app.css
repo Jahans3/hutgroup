@@ -7985,6 +7985,7 @@ button.close {
  **/
 body {
   font-family: 'Open Sans', sans-serif;
+  height: 1500px;
 }
 
 .header {
@@ -8126,6 +8127,7 @@ body {
 
 .header .input-group button {
   height: 140%;
+  width: 101%;
   border-radius: 0;
   color: white;
   text-transform: uppercase;
@@ -8144,6 +8146,10 @@ body {
 /** ------------------------
  **  STICKY NAV
  **/
+.clearfix {
+  margin-bottom: 0;
+}
+
 .sticky-nav {
   background: #0060c1;
 }
@@ -8155,31 +8161,53 @@ body {
   margin-right: auto;
 }
 
-.nav-menu ul {
+.logo-li {
+  display: none;
+  border-left: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 20px;
   padding-left: 0;
+}
+
+.logo-li .logo-wrapper {
+  position: relative;
+  top: -7;
+  background-image: url("../../assets/images/snap-logo.png");
+  background-size: cover;
+  width: 70px;
+  height: 33px;
+}
+
+.nav-menu ul {
+  display: inline-block;
+  padding-left: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-menu li {
   padding: 14px 10px;
-  display: inline-block;
+  float: left;
   border-left: 1px solid #0e3459;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
   height: 49px;
   font-size: 15px;
 }
 
-.nav-menu li:hover:nth-child(1) .range-wrapper {
+.nav-menu li:hover:nth-child(2) .range-wrapper {
   display: inline-block;
 }
 
-.nav-menu li:hover:nth-child(2) .goal-wrapper, .nav-menu li:hover:nth-child(2) .sport-wrapper, .nav-menu li:hover:nth-child(2) .zone-wrapper {
+.nav-menu li:hover:nth-child(3) .goal-wrapper, .nav-menu li:hover:nth-child(3) .sport-wrapper, .nav-menu li:hover:nth-child(3) .zone-wrapper {
   display: inline-block;
 }
 
-.nav-menu li:hover:nth-child(3) .sport-wrapper {
+.nav-menu li:hover:nth-child(4) .sport-wrapper {
   display: inline-block;
 }
 
-.nav-menu li:hover:nth-child(4) .zone-wrapper {
+.nav-menu li:hover:nth-child(5) .zone-wrapper {
   display: inline-block;
 }
 
@@ -8234,7 +8262,7 @@ body {
 
 .range-row li {
   height: auto;
-  width: auto;
+  width: 100%;
   display: block;
   border: none;
   padding: 0;
@@ -8271,6 +8299,7 @@ body {
   display: inline-block;
   padding: 12px 16px;
   margin: 0;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .goal-row li {
@@ -8355,7 +8384,7 @@ body {
 .text {
   vertical-align: top;
   background-color: #fff;
-  width: 248px;
+  width: 247px;
   height: 48px;
   color: #728391;
   font-size: 16px;
@@ -8393,7 +8422,7 @@ body {
 }
 
 .sport-row .num {
-  width: 39px;
+  width: 48px;
 }
 
 .sport-row li {
@@ -8466,4 +8495,145 @@ body {
   left: 0;
   right: 0;
   font-size: 24px;
+}
+
+.acc-menu {
+  float: right;
+  position: relative;
+}
+
+.acc-menu li:hover:nth-child(1) .acc-wrapper {
+  display: inline-block;
+}
+
+.acc-wrapper {
+  display: none;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  padding: 20px 20px 8px;
+  box-shadow: 0 4px 6px rgba(50, 50, 50, 0.6);
+}
+
+.acc-row {
+  position: relative;
+  font-size: 12px;
+  width: 100%;
+}
+
+.acc-row a {
+  color: #728391;
+  font-size: 12px;
+  text-transform: none;
+  text-align: left;
+  display: block;
+}
+
+.acc-row a:hover {
+  color: #2893ff;
+}
+
+.acc-row span {
+  text-align: left;
+  float: left;
+  margin: 10px 0;
+}
+
+.acc-row ul {
+  display: inline-block;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.acc-row li {
+  border: none;
+  padding: 0;
+  display: block;
+  height: 20px;
+  width: 100%;
+  float: center;
+}
+
+.acc-row li:last-child {
+  border: none;
+}
+
+.btn-login a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 8px;
+  background-color: #e77e23;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btn-login a:hover {
+  color: #fff;
+}
+
+.a-reg {
+  display: block;
+  float: right;
+  margin: 10px 0;
+  text-decoration: underline;
+  color: #2893ff;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sticky .nav-main-ul,
+.sticky .logo-li {
+  display: inline-block;
+  border-left: none;
+}
+
+.sticky .range-wrapper,
+.sticky .goal-wrapper, .sticky .sport-wrapper, .sticky .zone-wrapper {
+  top: 48;
+}
+
+.sticky .acc-wrapper {
+  top: 45;
+}
+
+/** ------------------------
+ **  QUAL NAV
+ **/
+.qual-nav {
+  background-color: #ededed;
+}
+
+.qual-nav ul {
+  padding: 10px 0 14px 0;
+  text-align: center;
+}
+
+.qual-nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.qual-nav a {
+  color: #495f73;
+}
+
+.qual-nav a:hover {
+  text-decoration: none;
+  color: #7892aa;
+}
+
+.qual-nav i {
+  position: relative;
+  top: 3;
+  font-size: 21px;
 }

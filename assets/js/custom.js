@@ -1,75 +1,34 @@
-$(document).ready( function() {
+/**
+ ** STICKY NAV
+ **/
+var header             = document.querySelector('.header'),
+    header_height      = getComputedStyle(header).height.split('px')[0],
+    title              = document.querySelector('.sticky-nav'),
+    fix_class          = 'sticky';
 
-	//scrolly clicky things
-	$(function() {
-	  $('a[href*=#]:not([href=#])').click(function() {
-	  	
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
-	      var target = $(this.hash);
+function stickyScroll() {
 
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  if( window.pageYOffset > header_height) {
+    title.classList.add(fix_class);
+  }
 
-	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	  });
-	});
+  if( window.pageYOffset < header_height) {
+    title.classList.remove(fix_class);
+  }
+}
 
-	//slider
-	$(function(){
+//scroll handler to toggle classes.
+window.addEventListener('scroll', stickyScroll, false);    
 
-			//Set image width, slider speed, pause time and initialise current slide
-			var width = 473, slideSpeed = 1000, pause = 3000, curSlide = 0;
+window.onload = function() {
+    // Countdown timer
+     var clock = document.getElementById("countdown-wrapper"),
+            targetDate = new Date(2050, 00, 01); // Jan 1, 2050
+     
+    clock.innerHTML = countdown(targetDate).toString();
 
-			//Get slider, ul container and sliders through DOM and store in variables
-			var $slider = $('#slider'), $slideContainer = $slider.find('.slides'), $slide = $slider.find('.slide');
-
-			//Get total number of slides
-			var totSlides = (width * $slide.length) - width;
-
-			//Interval
-			var interval;
-
-			//Start moving slider
-			function startSlider(){
-				//set interval
-				interval = setInterval(function(){
-
-					//Check if we're on last slide
-					if(curSlide == $slide.length-1){
-
-							//If on last slide go back to beginning
-							$slideContainer.delay(slideSpeed);
-							$slideContainer.animate({'margin-left': '+='+totSlides+'px'}, slideSpeed);
-							curSlide = 0;
-						} else {
-							$($slideContainer).animate({'margin-left': '-='+width+'px'}, slideSpeed, function(){
-
-							//Increment current slide
-							curSlide++;
-							});
-						}
-
-					
-				}, pause);
-			}
-
-			//Pause slider
-			function stopSlider(){
-				clearInterval(interval);
-			}
-
-			//If mouseover stop movement, if mouseleave restart slider
-			$slider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
-
-			//Begin sliding
-			startSlider();
-
-		});
-});
-
+    setInterval(function(){
+        clock.innerHTML = countdown(targetDate).toString();
+    }, 1000);
+}
