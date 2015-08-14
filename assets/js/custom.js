@@ -39,7 +39,7 @@ function countdownTimer() {
       //...hours
       if (base_hours-hours < 10) {
         //if we hit 0 on countdown
-        if (base_hours-hours < 4) {
+        if (base_hours-hours < 0) {
           hours_str = (base_hours-hours+24).toString();
         }
         else {
