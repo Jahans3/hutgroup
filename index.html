@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <section class="header">
   <div class="row header-row">
     <div class="logo-wrapper col-sm-3">
@@ -301,7 +302,7 @@
         </li>
       </ul>
       <ul class="clearfix acc-menu">
-        <li> <a href="#"><i class="fa fa-user"></i>  Account</a>
+        <li> <a href="#"><i class="fa fa-user"></i>  <span class="acc-span">Account</span></a>
           <div class="acc-wrapper">
             <div class="acc-row">
               <div class="btn-login"><a href="">Login</a></div>
@@ -316,24 +317,428 @@
             </div>
           </div>
         </li>
-        <li> <a href="#"><i class="fa fa-shopping-cart"></i>  0</a> </li>
+        <li> <a href="#"><i class="fa fa-shopping-cart"></i> <span class="basket-span">0</span></a> </li>
       </ul>
     </div>
     <div class="nav-account"></div>
   </div>
 </section>
 
+<!-- quality nav/display bar -->
 <section class="qual-nav">
   <ul>
     <li><a href="#"><i class="fa fa-truck"></i> FREE Delivery when you spend over &pound50</a></li>
     <li><a href="#"><i class="fa fa-arrow-circle-o-down"></i> Lowest prices</a></li>
     <li><a href="#"><i class="fa fa-check-circle"></i> Finest quality</a></li>
-    <li><a>00 : 00 : 00</a></li>
+    <li><a href="#"><span class="countdown-span">
+      <i class="fa fa-clock-o"></i> Order by 9PM for Next Day Delivery</a>
+      <span class="countdown-wrapper">
+        <span id="c-hours"></span> : <span id="c-minutes"></span> : <span id="c-seconds"></span>
+      </span>
+    </span>
+    </li>
   </ul>
 </section>
 
-</body>
+<!-- main product section -->
+<section class="main-product-content">
+  <!-- main product wrapper -->
+  <div class="product-wrapper">
+    <div class="media-wrapper">
+      <div class="image-wrapper">
+        <a href="#" id="imgview-modal">
+          <div class="shaker-image"></div>
+        </a>
+        <p class="image-zoom-p">
+          <a href="#" id="aview-modal">View large image</a>
+        </p>
 
+      </div>
+      <div class="social-media-wrapper">
+
+          <!-- twitter button -->
+          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+    </div>
+    <div class="product-info-wrapper">
+      <div class="product-info col-xs-8">
+        <div class="product-header">
+          <h1>MyProtein Shaker Bottle</h1>
+          <h2>Smooth Lump-free Shakes with Minimal Effort</h2>
+          <div class="rating-wrapper">
+            <div class="stars"></div>
+            <a href="#">Customer Reviews</a>
+          </div>
+        </div>
+        <div class="buy-product">
+          <div class="price">
+            <h2>
+              &pound1.99
+            </h2>
+          </div>
+          <div class="quantity">
+            Quantity: 
+            <input type="text" value="1">
+          </div>
+          <div class="add-to-basket">
+            <a href="#">Add to basket</a>
+          </div>    
+        </div>
+      </div>
+
+      <!-- related products -->
+      <div class="related-products col-xs-4">
+        <div class="related-product-wrapper">
+          <h2 class="rprod-title">You May Also Like...</h2>
+          <div class="rproduct-wrapper">
+            <div class="rprod-image col-xs-6">
+              <a href="#"></a>
+            </div>
+            <div class="rprod-text col-xs-6">
+              <a href="#">Plastic Scoop</a>
+              <div class="rprod-rating"></div>
+              <h2>&pound0.65</h2>
+            </div>
+          </div>
+          <div class="rproduct-wrapper">
+            <div class="rprod-image col-xs-6">
+              <a href="#"></a>
+            </div>
+            <div class="rprod-text col-xs-6">
+              <a href="#">Plastic Scoop</a>
+              <div class="rprod-rating"></div>
+              <h2>&pound0.65</h2>
+            </div>
+          </div>
+          <div class="rproduct-wrapper">
+            <div class="rprod-image col-xs-6">
+              <a href="#"></a>
+            </div>
+            <div class="rprod-text col-xs-6">
+              <a href="#">Plastic Scoop</a>
+              <div class="rprod-rating"></div>
+              <h2>&pound0.65</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- price guarantee section -->
+  <div class="price-beater">
+    <h2>Lowest Prices Guaranteed</h2>
+    <p>Found a similar product cheaper elsewhere?</p>
+    <a href="#">We promise to beat any price by 5% - Try our Price Beater</a>
+  </div>
+  
+  <!-- tabbed panels -->
+  <div class="tabs">
+    <div class="tab-title-wrapper">
+      <div id="left-tab-title" class="tab-title active">Product Overiew</div>
+      <div id="right-tab-title" class="tab-title">Suggested Use</div>
+    </div>
+    <div id="left-tab" class="tab1 tab active">
+      <div class="tab-text">
+        <h2>Left Title</h2>
+        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
+      <div class="tab-text-r">
+        <h2>Left Title</h2>
+        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
+    </div>
+    <div id="right-tab" class="tab2 tab">
+      <div class="tab-text">
+        <h2>Right Title</h2>
+        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
+      <div class="tab-text-r">
+        <h2>Right Title</h2>
+        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="clearfix"></div>
+
+<!-- recommended procuts section -->
+<section class="recommended">
+  <div class="reco-wrapper">
+    <h2>Customers Also Bought</h2>
+    <div class="reco-items-wrapper">
+      <div class="reco-item">
+        <div class="reco-image"></div>
+        <div class="reco-rating"></div>
+        <a href="#">Plastic Scoop</a>
+        <h4>&pound0.65</h4>
+      </div>
+      <div class="reco-item">
+        <div class="reco-image"></div>
+        <div class="reco-rating"></div>
+        <a href="#">Plastic Scoop</a>
+        <h4>&pound0.65</h4>
+      </div>
+      <div class="reco-item">
+        <div class="reco-image"></div>
+        <div class="reco-rating"></div>
+        <a href="#">Plastic Scoop</a>
+        <h4>&pound0.65</h4>
+      </div>
+      <div class="reco-item">
+        <div class="reco-image"></div>
+        <div class="reco-rating"></div>
+        <a href="#">Plastic Scoop</a>
+        <h4>&pound0.65</h4>
+      </div>
+      <div class="reco-item">
+        <div class="reco-image"></div>
+        <div class="reco-rating"></div>
+        <a href="#">Plastic Scoop</a>
+        <h4>&pound0.65</h4>
+      </div>
+      <div class="reco-item">
+        <div class="reco-image"></div>
+        <div class="reco-rating"></div>
+        <a href="#">Plastic Scoop</a>
+        <h4>&pound0.65</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- comments section -->
+<section class="comments-reviews">
+  <div class="comments-wrapper">
+    <h2>Customer Reviews</h2>
+    <div class="summary">
+      <h3>Summary</h3>
+      <div class="star-summary">
+        <h4>4.72</h4>
+        <div class="rating-img"></div>
+        <p>(521 Reviews)</p>
+        <div class="stars-details"></div>
+      </div>
+      <div class="create-review">
+        <p>Write a review to be in with a chance of winning a &pound100 voucher</p>
+        <a href="#">Create a Review</a>
+      </div>
+    </div>
+    <div class="reviews">
+      <div class="review-sort">
+      <div class="showing">
+            <p>Show 1 to 50 of 521 reviews</p>
+            <select>
+              <option>10</option>
+              <option>20</option>
+              <option>50</option>
+              <option>100</option>
+            </select>
+          </div>
+          <div class="sortby">
+            <p id="sortby-p">Sort by</p>
+            <select id="sortby-select">
+              <option>Created on</option>
+              <option>Rating</option>
+              <option>Votes</option>
+            </select>
+          </div>
+        </div>
+      <div class="review-wrapper">
+        <div class="review-item">
+          <h3 class="review-title">Review Title</h3>
+          <div class="review-rating">
+            <div class="rating">
+              <div class="overall-wrapper">
+                <h3 class="overall-header">Overall:</h3>
+                <div class="overall"></div>
+                <div class="secondary-stars">
+                  <h4>Mixability</h4>
+                  <div class="stars-black"></div>
+                  <h4>Taste</h4>
+                  <div class="stars-black"></div>
+                  <h4>Effectiveness</h4>
+                  <div class="stars-black"></div>
+                </div>
+                <p class="date">13th April 2015 by Josh</p>
+              </div>
+            </div>
+            <p class="rating-date"></p>
+          </div>
+          <p class="review-text">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          <div class="review-thumbs">
+            <p>Was this helpful?</p>
+            <a class="thumb"><i id="thumb-green" class="fa fa-thumbs-up"></i> Yes</a>
+            <a class="thumb"><i id="thumb-red" class="fa fa-thumbs-down"></i> No</a>
+            <a class="report">Report this review</a>
+          </div>
+        </div>
+        <div class="review-item">
+          <h3 class="review-title">Review Title</h3>
+          <div class="review-rating">
+            <div class="rating">
+              <div class="overall-wrapper">
+                <h3 class="overall-header">Overall:</h3>
+                <div class="overall"></div>
+                <div class="secondary-stars">
+                  <h4>Mixability</h4>
+                  <div class="stars-black"></div>
+                  <h4>Taste</h4>
+                  <div class="stars-black"></div>
+                  <h4>Effectiveness</h4>
+                  <div class="stars-black"></div>
+                </div>
+                <p class="date">13th April 2015 by Josh</p>
+              </div>
+            </div>
+            <p class="rating-date"></p>
+          </div>
+          <p class="review-text">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          <div class="review-thumbs">
+            <p>Was this helpful?</p>
+            <a class="thumb"><i id="thumb-green" class="fa fa-thumbs-up"></i> Yes</a>
+            <a class="thumb"><i id="thumb-red" class="fa fa-thumbs-down"></i> No</a>
+            <a class="report">Report this review</a>
+          </div>
+        </div>
+        <div class="review-item">
+          <h3 class="review-title">Review Title</h3>
+          <div class="review-rating">
+            <div class="rating">
+              <div class="overall-wrapper">
+                <h3 class="overall-header">Overall:</h3>
+                <div class="overall"></div>
+                <div class="secondary-stars">
+                  <h4>Mixability</h4>
+                  <div class="stars-black"></div>
+                  <h4>Taste</h4>
+                  <div class="stars-black"></div>
+                  <h4>Effectiveness</h4>
+                  <div class="stars-black"></div>
+                </div>
+                <p class="date">13th April 2015 by Josh</p>
+              </div>
+            </div>
+            <p class="rating-date"></p>
+          </div>
+          <p class="review-text">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          <div class="review-thumbs">
+            <p>Was this helpful?</p>
+            <a class="thumb"><i id="thumb-green" class="fa fa-thumbs-up"></i> Yes</a>
+            <a class="thumb"><i id="thumb-red" class="fa fa-thumbs-down"></i> No</a>
+            <a class="report">Report this review</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<section class="footer">
+  <div class="awards-wrapper">
+    <ul>
+      <li>
+        <div class="award-image"></div>
+        <p>Award 2015</p>
+      </li>
+      <li>
+        <div class="award-image"></div>
+        <p>Award 2015</p>
+      </li>
+      <li>
+        <div class="award-image"></div>
+        <p>Award 2015</p>
+      </li>
+      <li>
+        <div class="award-image"></div>
+        <p>Award 2015</p>
+      </li>
+      <li>
+        <div class="award-image"></div>
+        <p>Award 2015</p>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-links">
+    <ul class="footer-link-titles">
+      <li>Title</li>
+      <li></li>
+      <li>Title</li>
+      <li></li>
+      <li>Title</li>
+      <li>Title</li>
+    </ul>
+    <ul>
+      <li>
+        <ul>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+          <li>Test text</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<!--image modal container -->
+<div id="image-modal-wrapper">
+  <div class="modal-image-container"></div>
+</div>
+
+</body>
   <script src="assets/js/countdown.min.js"></script>
   <script type="text/javascript" src="assets/js/custom.js"></script>
 </html>
