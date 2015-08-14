@@ -8730,15 +8730,15 @@ body {
 }
 
 .modal-image-container {
-  height: 25%;
-  width: 25%;
+  height: 40%;
+  width: 40%;
   margin: auto;
   margin-top: 10%;
   padding: 12px;
   background-color: #fff;
   background-image: url("../../assets/images/shaker-bottle-large.jpg");
   background-size: 100%;
-  box-shadow: 10px rgba(50, 50, 50, 0.6);
+  box-shadow: 9px 10px 5px 0px rgba(0, 0, 0, 0.45);
 }
 
 .modal-active {
