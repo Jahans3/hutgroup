@@ -9457,6 +9457,10 @@ body {
   color: #303e4b;
 }
 
+.social-wrap i:hover {
+  color: #fff;
+}
+
 .media-fb:hover {
   background-color: blue;
 }

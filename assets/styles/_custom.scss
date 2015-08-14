@@ -1291,6 +1291,9 @@ background-color: #ededed;
 	background-color: #b7bfc6;
 	i {
 		color: #303e4b;
+		&:hover {
+			color: #fff;
+		}
 	}
 }
 .media-fb:hover {
