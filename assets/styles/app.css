@@ -8267,6 +8267,10 @@ body {
   white-space: nowrap;
 }
 
+.range-row ul {
+  border: none;
+}
+
 .range-row li {
   height: auto;
   width: 100%;
