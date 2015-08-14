@@ -9370,6 +9370,7 @@ body {
   margin: 0;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
 }
 
 .footer-link-titles li,
