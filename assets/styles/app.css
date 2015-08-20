@@ -9462,7 +9462,7 @@ body {
   color: #303e4b;
 }
 
-.social-wrap i:hover {
+.social-wrap:hover i {
   color: #fff;
 }
 
